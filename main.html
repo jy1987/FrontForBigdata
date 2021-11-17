@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="./static/css/styles.css" >
     <title>Predict time with Bigdata</title>
 </head>
-<body>
-    <div class="text-3xl bg-red-300">hello?</div>
-
-    <a href="">lalala</a>
+<body class="mt-16 font-light bg-white ">
+    <header class="container max-w-full items-center justify-between fixed">
+        <div class="bg-indigo-400 py-10">
+            <div class="text-2xl text-center font-semibold text-green-100">예상시간예측</div>
+    
+        </div>
+        <div class="mt-10 flex flex-col items-center justify-center py-10 bg-purple-400">
+            <div class="mb-10">
+                <span class="text-lg font-medium text-green-100">비행도착날짜, 목적지, 특송사 등을 선택해주세요.</span>
+            </div>
+            <div>
+                <form method="post" action="">
+                    <input class="px-4 text-center py-4 rounded-md mx-2" placeholder="select your city" name="city" />
+                    <input class="px-4 text-center py-4 rounded-md mx-2" placeholder="select your carrier" name="carrier" />
+                    <input class="px-4 text-center py-4 rounded-md mx-2" placeholder="select your flight arrival date" name="date" />
+                    <button type="submit">submit</button> 
+                </form>
+             
+            </div>
+           
+        </div>
+    </header>
+  
+   
 </body>
 </html>

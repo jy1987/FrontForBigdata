@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import Flask, request
+from flask import Flask, request, render_template, redirect
 from flask_restx import Api, Resource, Namespace
 import pickle
 import pandas as pd
@@ -93,11 +93,3 @@ class inputInfos(Resource):
             "day2": infos[day2],
         }
         """
-
-
-@Infos.route("/<int:todo_id>", methods=["GET"])
-class getInfos(Resource):
-    def get(self, todo_id):
-        return {
-            "todo_id": todo_id,
-        }
