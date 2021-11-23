@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/styles.css" >
+    <link rel="stylesheet" href="main.css"
     <title>Predict time with Bigdata</title>
 </head>
-<body class="mt-16 font-light bg-white ">
+<body class="hello mt-16 font-light bg-red-50 ">
     <header class="container max-w-full items-center justify-between fixed">
         <div class="bg-indigo-400 py-10">
             <div class="text-2xl text-center font-semibold text-green-100">예상시간예측</div>
@@ -17,19 +18,78 @@
             <div class="mb-10">
                 <span class="text-lg font-medium text-green-100">비행도착날짜, 목적지, 특송사 등을 선택해주세요.</span>
             </div>
-            <div>
-                <form method="post" action="">
-                    <input class="px-4 text-center py-4 rounded-md mx-2" placeholder="select your city" name="city" />
-                    <input class="px-4 text-center py-4 rounded-md mx-2" placeholder="select your carrier" name="carrier" />
-                    <input class="px-4 text-center py-4 rounded-md mx-2" placeholder="select your flight arrival date" name="date" />
-                    <button type="submit">submit</button> 
-                </form>
-             
-            </div>
-           
+            <form class="js-select" action="">
+                <select name="arrival" class="js-arrival px-4 py-4 rounded-md mx-4">
+                    <option value="" class="title text-center  mx-2">항공도착시간</option> 
+                    <option value="600">06:00</option>
+                    <option value="700">07:00</option>
+                    <option value="900">09:00</option>
+                    <option value="1200">12:00</option>
+                    
+    
+                </select>
+                <select name="destination" class="js-destination px-4 py-4 rounded-md mx-4">
+                    <option value="" class="text-center  mx-2">목적지</option> 
+                    <option value="1">Seoul</option>
+                    <option value="2">Incheon</option>
+                    <option value="3">Busan</option>
+                    <option value="4">Jeju</option>
+                    
+    
+                </select>
+                <select name="carrier" class="js-carrier px-4 py-4 rounded-md mx-4">
+                    <option value="" class="text-center  mx-2">특송사</option> 
+                    <option value="1">YD</option>
+                    <option value="2">CJ</option>
+                    <option value="3">Hanjin</option>
+                    <option value="4">JY</option>
+                    
+    
+                </select>
+
+                <select name="shipping" class="js-shipping px-4 py-4 rounded-md mx-4">
+                    <option value="" class="text-center  mx-2">배송업체</option> 
+                    <option value="0">우체국</option>
+                    <option value="1">CJ</option>
+              
+                    
+    
+                </select>
+
+                <select name="day1" class="js-day1 px-4 py-4 rounded-md mx-4">
+                    <option value="" class="text-center  mx-2">항공도착요일</option> 
+                    <option value="0">Mon</option>
+                    <option value="1">Tue</option>
+                    <option value="2">Wed</option>
+                    <option value="3">Thu</option>
+                    <option value="4">Fri</option>
+                    <option value="5">Sat</option>
+                    <option value="6">Sun</option>
+                    
+    
+                </select>
+
+                <select name="day2" class="js-day2 px-4 py-4 rounded-md mx-4">
+                    <option value="" class="text-center  mx-2">집배점 예상 도착요일</option> 
+                    <option value="0">Mon</option>
+                    <option value="1">Tue</option>
+                    <option value="2">Wed</option>
+                    <option value="3">Thu</option>
+                    <option value="4">Fri</option>
+                    <option value="5">Sat</option>
+                    <option value="6">Sun</option>
+                    
+    
+                </select>
+                <input type="submit">
+            </form>
+        <div id="result" class="hidden">
+
+        </div>
         </div>
     </header>
   
-   
+   <script src="calculate.js"></script>
+   <script src="console.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+.active {
+    color: tan;
+    text-decoration: violet;
+    border-radius: 50px;
+}
+
+.hidden{
+    display: none;
+}
+
+.js-destination {
+    color:violet
+}
