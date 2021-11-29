@@ -1,19 +1,23 @@
 # -*- coding: utf-8 -*-
 
+import http
 from flask import Flask, request, render_template, redirect
+import flask
 from flask_restx import Api, Resource, Namespace
 import pickle
 import pandas as pd
 
 infos = {}
 
-Infos = Namespace(name="Infos", description="배송시간예측을 위한 API")
+Infos = Namespace(name="api", description="배송시간예측을 위한 API")
 
 
 @Infos.route("", methods=["POST"])
 class inputInfos(Resource):
     def post(self):
+        print("hello")
         """API 활용하기 위해 조건들 입력 후 예상소요시간 산출 및 제공"""
+        """
         with open(
             "/Users/jeyongkim/Dropbox/JYD/datasForAnalyzing/resultTotalBigdata_v1.cpkl",
             "rb",
@@ -83,6 +87,8 @@ class inputInfos(Resource):
         interval = f"{day}일 뒤, {hours}시 사이"
         print(interval)
         return interval
+        """
+
         """
         return {
             "shipping": infos[shipping],

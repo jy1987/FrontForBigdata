@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/styles.css" >
-    <link rel="stylesheet" href="main.css"
+    <link rel="stylesheet" href="main.css">
     <title>Predict time with Bigdata</title>
 </head>
-<body class="hello mt-16 font-light bg-red-50 ">
-    <header class="container max-w-full items-center justify-between fixed">
+<body class="mt-16 font-light bg-red-50 ">
+    <header class="container max-w-full items-center justify-between">
+        <div class="js-time flex mb-5 justify-end mr-5 font-medium text-pink-600">
+            What time is it now
+        </div>
         <div class="bg-indigo-400 py-10">
             <div class="text-2xl text-center font-semibold text-green-100">예상시간예측</div>
     
@@ -18,7 +21,7 @@
             <div class="mb-10">
                 <span class="text-lg font-medium text-green-100">비행도착날짜, 목적지, 특송사 등을 선택해주세요.</span>
             </div>
-            <form class="js-select" action="">
+            <form class="js-select hidden" action="">
                 <select name="arrival" class="js-arrival px-4 py-4 rounded-md mx-4">
                     <option value="" class="title text-center  mx-2">항공도착시간</option> 
                     <option value="600">06:00</option>
@@ -88,8 +91,14 @@
         </div>
         </div>
     </header>
+
+    <footer class="mt-10 flex justify-center bg-gray-200 py-2">
+        <div class="text-sm text-yellow-500">YD Company, 87jy1015@gmail.com</div>
+    </footer>
   
    <script src="calculate.js"></script>
    <script src="console.js"></script>
+   <script src="interval.js"></script>
+   <script src="background.js"></script>
 </body>
 </html>
