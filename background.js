@@ -4,7 +4,6 @@ let factor=Date.now()
 
 function getRandom(){
     const random=Math.floor(Math.random(factor)*4)
-    console.log(random)
     return random    
 }
 
@@ -12,7 +11,7 @@ function addRandomBg(){
     const number=getRandom()
     const newClassName=`hello${number}`
     const oldClassName=body.classList[3]
-    console.log(newClassName)
+    
     localStorage.setItem("number",newClassName)
     body.classList.replace(oldClassName,newClassName)
 }
@@ -23,8 +22,8 @@ function removeRandomBg(){
     body.classList.remove(preClassName)
 }
 
-/*setTimeout(body.classList.add(`hello${getRandom()}`), 0);
-setInterval(addRandomBg, 3000);*/
+setTimeout(body.classList.add(`hello${getRandom()}`), 0);
+setInterval(addRandomBg, 3000);
 
 
 

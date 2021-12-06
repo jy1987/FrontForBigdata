@@ -2,7 +2,7 @@
 from flask_cors import CORS, cross_origin
 from flask import Flask, request
 from flask_restx import Api, Resource, Namespace, resource
-import pickle
+import pickle, json
 import pandas as pd
 from infos import Infos
 
@@ -26,9 +26,7 @@ infos = {}
 class inputInfos(Resource):
     def post(self):
 
-        a = request.json.get("first")
-        b = request.json.get("second")
-        return a + b
+        pass
         """API 활용하기 위해 조건들 입력 후 예상소요시간 산출 및 제공"""
         """
         with open(
